@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 VERSION = '0.0.1'
-DESCRIPTION = 'nse website stock data featch'
+DESCRIPTION = 'indian stock data featch'
 LONG_DESCRIPTION = 'Featach difrant type of stock data, using nse baskend rest api. and create csv file and reprent graph format.'
 
 # Setting up
