@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.1'
+VERSION = '0.0.3'
 DESCRIPTION = 'indian stock data featch'
 LONG_DESCRIPTION = 'Featach difrant type of stock data, using nse baskend rest api. and create csv file and reprent graph format.'
 
@@ -22,7 +22,7 @@ setup(
     long_description=long_description,
     packages=find_packages(),
     install_requires=['opencv-python', 'numpy', 'pandas', 'matplotlib','datetime'],
-    keywords=['python', 'nse', 'stream', 'sharemarket', 'Stock market', 'csv'],
+    keywords=['python', 'nse', 'stock', 'sharemarket', 'Stock market', 'csv'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",

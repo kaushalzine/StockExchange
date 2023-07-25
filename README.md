@@ -63,3 +63,40 @@ stock data featch
                 mTIMESTAMP
 
             • Plot graph in linear scal  using Graph method 
+
+
+    6. Equity List- 
+        NSE listed company List.
+        Method-  equitytop_loosers()
+        predata – MCAP31032023_0.xlsx (Download using link https://www.nseindia.com/regulations/listing-compliance/nse-market-capitalisation-all-companies)
+        output – Teminal output Symbol of listed company
+                Create CSV File 
+                    Sr. No.
+                    Symbol
+                    Company Name
+                    Market capitalization as on March 31, 2023 (Rs in Lakhs)
+
+    7. Fno List -
+        Futures and Options data file.
+        Method – fno_list()
+        Output - fnolist, count
+            CSV File 
+
+    8. Equity Top Gainers-
+        Method – equitytop_gainers()
+        output – create top gainer  csv file 
+
+
+    9. Equity Top Loosers-
+        Method – equitytop_loosers()
+
+    10.  Option Chain-
+        Option chain data dispaly in terminal 
+        Indices OPTION – NIFTY, FINNIFTY, BANKNIFTY
+        Equities  OPTION -  all symbol
+        method  -optionchain(symbol)
+        Use - fnolist = optionchain('NIFTY')		
+	
+    11 . Top 25  Valume -
+        method – top_valume()
+        output – create csv File 
