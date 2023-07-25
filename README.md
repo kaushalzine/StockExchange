@@ -97,6 +97,20 @@ stock data featch
         method  -optionchain(symbol)
         Use - fnolist = optionchain('NIFTY')		
 	
-    11 . Top 25  Valume -
+    11. Top 25  Valume -
         method – top_valume()
         output – create csv File 
+
+
+    12. MOST ACTIVE EQUITIES -
+        method – active_equities(Num)
+        parameter –> num – equities  num of stock 
+        use -  active_equities(10)
+        output -> create csv file top 10 active quities
+
+
+    13. 52week High / Low stock -
+        method – highorlow_52week(range)
+        parameter ->range – “high”  (52week High Stock)
+                          - “low”    (52week Low Stock)
+        use  - highorlow_52week(“ high”)
