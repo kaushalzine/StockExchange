@@ -1,4 +1,3 @@
-from nsepython import *
 import requests
 from datetime import datetime
 import json
