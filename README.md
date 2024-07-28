@@ -114,3 +114,20 @@ stock data featch
         parameter ->range – “high”  (52week High Stock)
                           - “low”    (52week Low Stock)
         use  - highorlow_52week(“ high”)
+
+
+
+    14 Volume Deliverable details data-
+        methiod - VolumeDeliverable_moredetails(Symbol, fromdate, todate)
+        parameter - symbol = 'ADANIENSOL'
+                    fromdate=('26-07-2024')
+                    todate=('26-07-2024')
+        use -   month data  in ditails ltp
+            VolumeDeliverable_moredetails(Symbol, fromdate, todate)
+
+    15 Volume Deliverable -
+        methiod - VolumeDeliverable(Symbol, fromdate, todate)
+        parameter - symbol = 'ADANIENSOL'
+                    fromdate=('26-07-2024')
+                    todate=('26-07-2024')
+        use - VolumeDeliverable(Symbol, fromdate, todate)

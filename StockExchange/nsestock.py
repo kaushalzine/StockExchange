@@ -195,6 +195,33 @@ def graph(data,symbol,start_date,end_date):
 
 
 
+#symbol month data  (from to date)
+def VolumeDeliverable_moredetails(Symbol, fromdate, todate):
+    url=f'https://www.nseindia.com/api/historical/securityArchives?from={fromdate}&to={todate}&symbol={Symbol}&dataType=priceVolumeDeliverable&series=ALL'
+  
+    payload = server_request(url)
+    # path = folder_create()
+    df_list = payload['data']
+    extracted_data = [{'date': entry['CH_TIMESTAMP'],'symbol':entry['CH_SYMBOL'], 'total_traded': entry['CH_TOT_TRADED_QTY'],'delevery_valume': entry['COP_DELIV_QTY'],'last_trade_price': entry['CH_LAST_TRADED_PRICE'],'52WEEK_HIGH_PRICE': entry['CH_52WEEK_HIGH_PRICE']} for entry in df_list]
+
+    df=pd.DataFrame(extracted_data)
+    df.to_csv(f'valume_deliverable_all{todate}_{Symbol}.csv') 
+    return extracted_data  
+
+#daly delivary valume 
+def VolumeDeliverable(Symbol, fromdate, todate):
+    url=f'https://www.nseindia.com/api/historical/securityArchives?from={fromdate}&to={todate}&symbol={Symbol}&dataType=deliverable&series=ALL'
+  
+    payload = server_request(url)
+    # path = folder_create()
+    df_list = payload['data']
+    extracted_data = [{'Symbol': entry['COP_SYMBOL'],'Date':entry['COP_TRADED_DT'], 'Trades_qty': entry['COP_TRADED_QTY'],'delevery_valume': entry['COP_DELIV_QTY']} for entry in df_list]    
+    df=pd.DataFrame(extracted_data)
+    df.to_csv(f'valume_deliverable'+todate+'.csv') 
+    
+    return extracted_data
+
+
 def main():
     symbol = 'BAJFINANCE'
     series = 'EQ'
